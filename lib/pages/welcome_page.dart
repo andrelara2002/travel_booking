@@ -1,4 +1,7 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
+import 'package:travel_booking/misc/colors.dart';
 import 'package:travel_booking/widgets/app_large_text.dart';
 import 'package:travel_booking/widgets/app_text.dart';
 import 'package:travel_booking/widgets/responsive_button.dart';
@@ -14,7 +17,7 @@ class _WelcomePageState extends State<WelcomePage> {
   List images = [
     'welcome-one.png',
     'welcome-two.png',
-    'welcome-three.png'
+    'welcome-three.png',
   ]; //Images to be shown at the screen
 
   @override
@@ -35,6 +38,7 @@ class _WelcomePageState extends State<WelcomePage> {
               child: Container(
                 margin: const EdgeInsets.only(top: 150, left: 20, right: 20),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,8 +59,21 @@ class _WelcomePageState extends State<WelcomePage> {
                       ],
                     ),
                     Column(
-                      children: List.generate(3, (index) {
-                        return Container();
+                      children: List.generate(images.length, (indexDots) {
+                        bool isDot = index == indexDots;
+
+                        return Container(
+                          margin: const EdgeInsets.only(bottom: 8),
+                          width: 8,
+                          height: isDot ? 25 : 8,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: isDot
+                                ? AppColors.mainColor
+                                : AppColors.mainColor.withOpacity(
+                                    (images.length - indexDots) * 0.3),
+                          ),
+                        );
                       }),
                     )
                   ],

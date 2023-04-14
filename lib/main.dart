@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_booking/pages/navpages/main_page.dart';
 import 'package:travel_booking/pages/welcome_page.dart';
 
 void main() {
@@ -11,12 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: WelcomePage());
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: MainPage(),
+    );
   }
 }
