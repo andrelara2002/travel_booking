@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:travel_booking/pages/home_page.dart';
+import 'package:travel_booking/pages/navpages/detail_page.dart';
 import 'package:travel_booking/pages/navpages/main_page.dart';
 import 'package:travel_booking/pages/welcome_page.dart';
 
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MainPage(),
+      home: HomePage(),
     );
   }
 }

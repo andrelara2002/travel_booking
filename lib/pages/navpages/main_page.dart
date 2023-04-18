@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_booking/misc/colors.dart';
 import 'package:travel_booking/pages/navpages/bar_item_page.dart';
-import 'package:travel_booking/pages/navpages/home_page.dart';
+import 'package:travel_booking/pages/home_page.dart';
 import 'package:travel_booking/pages/navpages/my_page.dart';
 import 'package:travel_booking/pages/navpages/search_page.dart';
 
